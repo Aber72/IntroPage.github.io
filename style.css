@@ -245,3 +245,12 @@ div h1{
   #bttn:hover {
     background-color: #043e29;
   }
+
+  .logo {
+    
+        width: 50px;  /* Adjust the width to your preferred size */
+        height: auto; /* Preserve the aspect ratio */
+    
+    
+
+  }

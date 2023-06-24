@@ -187,6 +187,7 @@
       
       
       
+      
       let Dat=document.getElementById("ldate").value;
       
       let RecieverComp=document.getElementById("rcname").value;
@@ -201,8 +202,30 @@
       var letterContainer = document.getElementById("letterContainer");
 
       // Create the introductory letter with the user input
-      var introLetter = " Date: " + Dat + "<br><br>Respected "+" "+ selectedOption +" "+ RecieverFName +" "+ RecieverLName +"<br>"+ RecieverComp +"<br>"+ RecieverAdd+"<br><br> Dear"+" "+ RecieverFName +","+"<br><br> I hope this letter finds you well. I am writing to introduce "+ SenderComp + " , a software company specializing in providing innovative solutions for businesses like yours.<br> <br> At "+ SenderComp +", we understand the challenges faced by businesses in today's competitive landscape. That's why we have developed a range of software solutions designed to help businesses streamline their operations, improve efficiency, and drive growth.<br><br>Our team of experienced professionals is dedicated to developing cutting-edge software that caters to the unique needs of our clients. We offer custom software development services, business process automation solutions, data analytics and business intelligence tools, and cloud computing services.<br><br>We take pride in delivering high-quality solutions that are tailored to meet your specific requirements. By leveraging our software solutions, you can optimize your workflows, make data-driven decisions, and embrace the scalability and flexibility of the cloud.<br><br><br>Thank you for considering "+ SenderComp +" as your software partner. We look forward to the opportunity to work with you and contribute to your business success.<br><br><br>"+SenderName+"<br>"+SenderPos+"<br>"+SenderComp;   
-      
+    //   var introLetter = image.+" Date: " + Dat + "<br><br>Respected "+" "+ selectedOption +" "+ RecieverFName +" "+ RecieverLName +"<br>"+ RecieverComp +"<br>"+ RecieverAdd+"<br><br> Dear"+" "+ RecieverFName +","+"<br><br> I hope this letter finds you well. I am writing to introduce "+ SenderComp + " , a software company specializing in providing innovative solutions for businesses like yours.<br> <br> At "+ SenderComp +", we understand the challenges faced by businesses in today's competitive landscape. That's why we have developed a range of software solutions designed to help businesses streamline their operations, improve efficiency, and drive growth.<br><br>Our team of experienced professionals is dedicated to developing cutting-edge software that caters to the unique needs of our clients. We offer custom software development services, business process automation solutions, data analytics and business intelligence tools, and cloud computing services.<br><br>We take pride in delivering high-quality solutions that are tailored to meet your specific requirements. By leveraging our software solutions, you can optimize your workflows, make data-driven decisions, and embrace the scalability and flexibility of the cloud.<br><br><br>Thank you for considering "+ SenderComp +" as your software partner. We look forward to the opportunity to work with you and contribute to your business success.<br><br><br>"+SenderName+"<br>"+SenderPos+"<br>"+SenderComp;   
+    let introLetter = `
+     <div class="text-center">
+                <img src="assets/Xlnc.png" alt="Image Icon" class="logo" style="display: inline-block; vertical-align: middle;">
+               <strong> <span style="color: blue; display: inline-block; vertical-align: middle;">XLNC.io</span></strong>
+            </div><br>
+        <div class="intro-letter">
+            <p>Date: ${Dat}</p><br>
+            <p>Respected ${selectedOption} ${RecieverFName} ${RecieverLName}</p>
+            <p>${RecieverComp}</p>
+            <p>${RecieverAdd}</p><br>
+            <p>Dear ${RecieverFName},</p><br>
+            <p>I hope this letter finds you well. I am writing to introduce ${SenderComp}, a software company specializing in providing innovative solutions for businesses like yours.</p>
+            <p>At ${SenderComp}, we understand the challenges faced by businesses in today's competitive landscape. That's why we have developed a range of software solutions designed to help businesses streamline their operations, improve efficiency, and drive growth.</p><br>
+            <p>Our team of experienced professionals is dedicated to developing cutting-edge software that caters to the unique needs of our clients. We offer custom software development services, business process automation solutions, data analytics and business intelligence tools, and cloud computing services.</p><br>
+            <p>We take pride in delivering high-quality solutions that are tailored to meet your specific requirements. By leveraging our software solutions, you can optimize your workflows, make data-driven decisions, and embrace the scalability and flexibility of the cloud.</p><br><br>
+            <p>Thank you for considering ${SenderComp} as your software partner. We look forward to the opportunity to work with you and contribute to your business success.</p>
+            <br><br>
+            <p>${SenderName}</p>
+            <p>${SenderPos}</p>
+            <p>${SenderComp}</p>
+        </div>
+    `;
+
       // Set the HTML content of the letter container to the intro letter
       letterContainer.innerHTML = introLetter;
      }
